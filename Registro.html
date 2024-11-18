@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Estilo.css">
+
+    <title>Registro - Flex & Fuel</title>
+    <link rel="stylesheet" href="styles.css">  <!-- Linking the existing CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background-image.jpg'); /* Placeholder for background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            width: 400px; /* Width of the container */
+            text-align: center; /* Center text */
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input, select {
+            width: 100%; /* Full width for inputs */
+            padding: 10px;
+            margin: 10px 0; /* Space between inputs */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #000; /* Black background for button */
+            color: #fff; /* White text */
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 100%; /* Full width for button */
+        }
+        button:hover {
+            background-color: #FFD700; /* Yellow background on hover */
+            color: #000; /* Black text on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registrarme</h1>
+        <form action="Pagina Principal.html"> <!-- Redirects to the main page on submit -->
+            <input type="text" placeholder="Nombre completo" required>
+            <select required>
+                <option value="" disabled selected>Selecciona tu país</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+            <input type="date" placeholder="Fecha de nacimiento" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Estilo.css">
+
+    <title>Mujeres - Flex & Fuel</title>
+    <style>
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .sidebar a:hover {
+            color: #FFD700; /* Yellow color for hover */
+        }
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="Pagina Principal.html">
+            <img src="LOGO CON LETRAS.PNG" alt="Logo" />
+            </a>     
+        <nav class="nav">
+            <a href="Equipamiento.html">Equipamiento</a>
+            <a href="Ropa.html">Ropa</a>
+            <a href="Suplementacion.html">Suplementación</a>
+            <a href="Accesorios.html">Accesorios</a>
+            <a href="Registro.html">Registrate</a>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Marcas</h2>
+            <a href="#gymshark">Gymshark</a>
+            <a href="#youngla">Young LA</a>
+            <a href="#alphalete">Alphalete</a>
+            <a href="#bornprimitive">Born Primitive</a>
+        </aside>
+        <main class="content">
+            <h1>Mujeres</h1>
+            <p>Bienvenida a la sección de ropa para mujeres. Selecciona una marca de la izquierda para explorar los productos.</p>
+            <section id="gymshark">
+                <h2>Gymshark</h2>
+                <p>Descripción y productos relacionados con Gymshark.</p>
+            </section>
+            <section id="youngla">
+                <h2>Young LA</h2>
+                <p>Descripción y productos relacionados con Young LA.</p>
+            </section>
+            <section id="alphalete">
+                <h2>Alphalete</h2>
+                <p>Descripción y productos relacionados con Alphalete.</p>
+            </section>
+            <section id="bornprimitive">
+                <h2>Born Primitive</h2>
+                <p>Descripción y productos relacionados con Born Primitive.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

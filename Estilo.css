@@ -1,0 +1,45 @@
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .header img {
+            height: 40px;  /* Altura del logo */
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;  /* For the pseudo-element */
+            overflow: hidden;  /* Hide overflow for the effect */
+        }
+        .nav a:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 100%;  /* Start below the text */
+            height: 2px;  /* Height of the line */
+            width: 100%;
+            background-color: #FFD700; /* Color amarillo */
+            transition: bottom 0.3s ease; /* Transition effect */
+            z-index: -1;  /* Place behind the text */
+        }
+        .nav a:hover:before {
+            bottom: 0;  /* Move up on hover */
+        }
+        .nav a:hover {
+            color: #FFD700;  /* Change text color on hover */
+        }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">  <!-- Linking the existing CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Link para Google Fonts -->
+    <title>Flex & Fuel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Fondo de la página */
+        }
+        .promocion {
+        display: flex; /* Utiliza Flexbox para alineación */
+        align-items: center; /* Centra verticalmente */
+        justify-content: space-between; /* Espacio entre elementos */
+        padding: 20px; /* Espacio interno */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado de negro a transparente */
+        color: #000000; 
+        }
+
+        .promocion-txt {
+            max-width: 50%; /* Ancho máximo del texto */
+        }
+        .promocion-txt h2 {
+            font-size: 28px; /* Tamaño de fuente para el eslogan */
+            margin: 0; /* Sin margen */
+            font-family: 'Pacifico', cursive; /* Cambia la fuente al eslogan */
+        }
+        .promocion-txt p {
+            font-size: 16px; /* Tamaño de fuente para el texto */
+            margin: 10px 0; /* Margen vertical */
+        }
+        .comprar-btn {
+            background-color: #000000; /* Color del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno */
+            border-radius: 5px; /* Esquinas redondeadas */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            font-weight: bold; /* Texto en negrita */
+            font-size: 16px; /* Tamaño de fuente */
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Asegura que el botón se comporte como un bloque */
+        }
+        .comprar-btn:hover {
+            background-color: #FFD700; /* Fondo amarillo al pasar el ratón */
+            color: #000; /* Texto negro al pasar el ratón */
+        }
+        .promocion-img {
+            max-width: 40%; /* Ancho máximo de la imagen */
+        }
+        img {
+            width: 100%; /* La imagen ocupa el 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .Video_inicio {
+            position: relative; /* Permite posicionar elementos sobre el video */
+            width: 100%; /* Ancho completo */
+            max-height: 700px; /* Establece una altura máxima para el video */
+            overflow: hidden; /* Oculta cualquier contenido que se desborde */
+        }
+        video {
+            width: 100%; /* Hace que el video ocupe el 100% del ancho */
+            height: auto; /* Mantiene la proporción del video */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="Pagina Principal.html">
+            <img src="LOGO CON LETRAS.PNG" alt="Logo" />
+        </a>
+        <nav class="nav">
+            <a href="Equipamiento.html">Equipamiento</a>
+            <a href="Ropa.html">Ropa</a>
+            <a href="Suplementacion.html">Suplementación</a>
+            <a href="Accesorios.html">Accesorios</a>
+            <a href="Registro.html">Registrate</a>
+        </nav>
+    </header>
+    <!-- Contenedor del video -->
+    <div class="Video_inicio">
+        <video autoplay muted loop>
+            <source src="Video_inicio.mp4" type="video/mp4"> <!-- Asegúrate de reemplazar "tu_video.mp4" con la ruta correcta -->
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    <!-- Sección de promoción encima del video -->
+    <div class="promocion">
+        <div class="promocion-txt">
+            <h2>Desafía tus límites, aumenta tu potencial.</h2>
+            <p>Descubre nuestros productos de fitness que te ayudarán a alcanzar tus metas<br>
+                 y mejorar tu rendimiento.</p>
+            <a href="Registro.html" class="comprar-btn">Regístrate</a>
+        </div>
+        <div class="promocion-img">
+            <img src="sam.jpg" alt="Flex & Fuel"> <!-- Asegúrate de que la imagen sea la correcta -->
+        </div>
+    </div>
+
+    <main>
+
+    </main>
+</body>
+</html>

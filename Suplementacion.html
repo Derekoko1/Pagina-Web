@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Estilo.css">
+
+    <title>Suplementación - Flex & Fuel</title>
+    <style>
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .sidebar a:hover {
+            color: #FFD700; /* Yellow color for hover */
+        }
+        .divider {
+            height: 100%;
+            width: 2px;  /* Width of the divider line */
+            background-color: #FFD700;  /* Color of the divider line */
+            position: absolute;
+            left: 100%;  /* Positioning it right next to the sidebar */
+            top: 0;
+        }
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="Pagina Principal.html">
+            <img src="LOGO CON LETRAS.PNG" alt="Logo" />
+            </a>
+        <nav class="nav">
+            <a href="Equipamiento.html">Equipamiento</a>
+            <a href="Ropa.html">Ropa</a>
+            <a href="Suplementacion.html">Suplementación</a>
+            <a href="Accesorios.html">Accesorios</a>
+            <a href="Registro.html">Registrate</a>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Categorías</h2>
+            <a href="#pre-workouts">Pre-workouts</a>
+            <a href="#proteinas">Proteínas</a>
+            <a href="#creatinas">Creatinas</a>
+            <a href="#vitaminas">Vitaminas</a>
+            <a href="#aminoacidos">Aminoácidos</a>
+            <div class="divider"></div>  <!-- Divider line -->
+        </aside>
+        <main class="content">
+            <h1>Suplementación</h1>
+            <p>Bienvenido a la sección de suplementación. Selecciona una categoría de la izquierda para explorar los productos.</p>
+            <section id="pre-workouts">
+                <h2>Pre-workouts</h2>
+                <p>Descripción y productos relacionados con pre-workouts.</p>
+            </section>
+            <section id="proteinas">
+                <h2>Proteínas</h2>
+                <p>Descripción y productos relacionados con proteínas.</p>
+            </section>
+            <section id="creatinas">
+                <h2>Creatinas</h2>
+                <p>Descripción y productos relacionados con creatinas.</p>
+            </section>
+            <section id="vitaminas">
+                <h2>Vitaminas</h2>
+                <p>Descripción y productos relacionados con vitaminas.</p>
+            </section>
+            <section id="aminoacidos">
+                <h2>Aminoácidos</h2>
+                <p>Descripción y productos relacionados con aminoácidos.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

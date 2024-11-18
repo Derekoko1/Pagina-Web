@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Estilo.css">
+
+    <title>Ropa - Flex & Fuel</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px); /* Full height minus header */
+        }
+        .section {
+            width: 400px;  /* Increased width */
+            height: 400px; /* Increased height */
+            border-radius: 10px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            margin: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: scale(1.05); 
+        }
+        .section h2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 28px;  
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hombres {
+            background-color: rgba(0, 0, 0, 0.6);
+            background-image: url('cbum.png'); /* Placeholder for men's background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .mujeres {
+            background-color: rgba(0, 0, 0, 0.6);
+            background-image: url('mujer.png'); 
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="Pagina Principal.html">
+        <img src="LOGO CON LETRAS.PNG" alt="Logo" />
+        </a>     
+        <nav class="nav">
+            <a href="Equipamiento.html">Equipamiento</a>
+            <a href="Ropa.html">Ropa</a>
+            <a href="Suplementacion.html">Suplementación</a>
+            <a href="Accesorios.html">Accesorios</a>
+            <a href="Registro.html">Registrate</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="section hombres" onclick="window.location='Hombres.html'"> 
+            <h2>Hombres</h2>
+        </div>
+        <div class="section mujeres" onclick="window.location='Mujeres.html'"> 
+            <h2>Mujeres</h2>
+        </div>
+    </div>
+</body>
+</html>
