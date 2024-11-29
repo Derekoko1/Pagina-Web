@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilo.css">  <!-- Linking the existing CSS -->
+    <link rel="stylesheet" href="Estilo.css">  <!-- Enlazando el CSS existente -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Link para Google Fonts -->
     <title>Flex & Fuel</title>
     <style>
@@ -12,27 +12,31 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5; /* Fondo de la página */
         }
+
         .promocion {
-        display: flex; /* Utiliza Flexbox para alineación */
-        align-items: center; /* Centra verticalmente */
-        justify-content: space-between; /* Espacio entre elementos */
-        padding: 20px; /* Espacio interno */
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado de negro a transparente */
-        color: #000000; 
+            display: flex; /* Utiliza Flexbox para alineación */
+            align-items: center; /* Centra verticalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            padding: 20px; /* Espacio interno */
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado de negro a transparente */
+            color: #000000;
         }
 
         .promocion-txt {
             max-width: 50%; /* Ancho máximo del texto */
         }
+
         .promocion-txt h2 {
             font-size: 28px; /* Tamaño de fuente para el eslogan */
             margin: 0; /* Sin margen */
             font-family: 'Pacifico', cursive; /* Cambia la fuente al eslogan */
         }
+
         .promocion-txt p {
             font-size: 16px; /* Tamaño de fuente para el texto */
             margin: 10px 0; /* Margen vertical */
         }
+
         .comprar-btn {
             background-color: #000000; /* Color del botón */
             color: #fff; /* Color del texto del botón */
@@ -45,23 +49,28 @@
             text-decoration: none; /* Sin subrayado */
             display: inline-block; /* Asegura que el botón se comporte como un bloque */
         }
+
         .comprar-btn:hover {
             background-color: #FFD700; /* Fondo amarillo al pasar el ratón */
             color: #000; /* Texto negro al pasar el ratón */
         }
+
         .promocion-img {
             max-width: 40%; /* Ancho máximo de la imagen */
         }
+
         img {
             width: 100%; /* La imagen ocupa el 100% del contenedor */
             height: auto; /* Mantiene la proporción de la imagen */
         }
+
         .Video_inicio {
             position: relative; /* Permite posicionar elementos sobre el video */
             width: 100%; /* Ancho completo */
             max-height: 700px; /* Establece una altura máxima para el video */
             overflow: hidden; /* Oculta cualquier contenido que se desborde */
         }
+
         video {
             width: 100%; /* Hace que el video ocupe el 100% del ancho */
             height: auto; /* Mantiene la proporción del video */
@@ -78,9 +87,13 @@
             <a href="Ropa.html">Ropa</a>
             <a href="Suplementacion.html">Suplementación</a>
             <a href="Accesorios.html">Accesorios</a>
-            <a href="Registro.html">Registrate</a>
+            <a href="Registro.html">Regístrate</a>
         </nav>
+        <a href="Carrito.html" class="icono-carrito">
+            <img src="carrito-icono.png" alt="Carrito" /> <!-- Asegúrate de tener esta imagen -->
+        </a>
     </header>
+    
     <!-- Contenedor del video -->
     <div class="Video_inicio">
         <video autoplay muted loop>
@@ -88,6 +101,7 @@
             Tu navegador no soporta el elemento de video.
         </video>
     </div>
+    
     <!-- Sección de promoción encima del video -->
     <div class="promocion">
         <div class="promocion-txt">
@@ -102,7 +116,10 @@
     </div>
 
     <main>
-
+        <a href="Carrito.html" class="icono-carrito">
+            <img src="carrito-icono.png" alt="Carrito" />
+            <span class="contador-carrito">3</span> <!-- Número de productos en el carrito -->
+        </a>        
     </main>
 </body>
 </html>

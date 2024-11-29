@@ -1,45 +1,89 @@
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-        }
-        .header {
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
-        .header img {
-            height: 40px;  /* Altura del logo */
-        }
-        .nav {
-            display: flex;
-            gap: 30px;
-        }
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            position: relative;  /* For the pseudo-element */
-            overflow: hidden;  /* Hide overflow for the effect */
-        }
-        .nav a:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 100%;  /* Start below the text */
-            height: 2px;  /* Height of the line */
-            width: 100%;
-            background-color: #FFD700; /* Color amarillo */
-            transition: bottom 0.3s ease; /* Transition effect */
-            z-index: -1;  /* Place behind the text */
-        }
-        .nav a:hover:before {
-            bottom: 0;  /* Move up on hover */
-        }
-        .nav a:hover {
-            color: #FFD700;  /* Change text color on hover */
-        }
+/* Estilo general */
+body { 
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Encabezado */
+.header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header img {
+    height: 40px;  /* Altura del logo */
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;  /* Para el pseudo-elemento */
+    overflow: hidden;  /* Ocultar el desbordamiento para el efecto */
+}
+
+.nav a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;  /* Empieza debajo del texto */
+    height: 2px;  /* Altura de la línea */
+    width: 100%;
+    background-color: #FFD700; /* Color amarillo */
+    transition: bottom 0.3s ease; /* Efecto de transición */
+    z-index: -1;  /* Colocarlo detrás del texto */
+}
+
+.nav a:hover:before {
+    bottom: 0;  /* Mover hacia arriba al pasar el mouse */
+}
+
+.nav a:hover {
+    color: #FFD700;  /* Cambiar el color del texto al pasar el mouse */
+}
+
+/* Estilo para el icono del carrito */
+.icono-carrito {
+    position: absolute;
+    right: 20px;  /* Ajusta el espacio desde el borde derecho */
+    top: 40%;  /* Centra el icono verticalmente en el encabezado */
+    transform: translateY(-50%);  /* Ajuste fino para centrar exactamente */
+    z-index: 10;  /* Asegura que el carrito esté por encima de otros elementos */
+}
+
+.icono-carrito img {
+    height: 40px;  /* Tamaño del ícono del carrito */
+    cursor: pointer;  /* Cambiar el cursor al pasar sobre el carrito */
+}
+
+.icono-carrito:hover img {
+    opacity: 0.8;  /* Efecto visual al pasar el mouse */
+}
+
+.icono-carrito {
+    position: relative;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;  /* Fondo rojo para el contador */
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
