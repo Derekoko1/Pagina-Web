@@ -1,11 +1,11 @@
-/* Estilo general */
+
 body { 
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
 }
 
-/* Encabezado */
+
 .header {
     background-color: #000;
     color: #fff;
@@ -16,10 +16,10 @@ body {
 }
 
 .header img {
-    height: 40px;  /* Altura del logo */
+    height: 40px;  
 }
 
-/* Navegación */
+
 .nav {
     display: flex;
     gap: 30px;
@@ -30,46 +30,46 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    position: relative;  /* Para el pseudo-elemento */
-    overflow: hidden;  /* Ocultar el desbordamiento para el efecto */
+    position: relative;  
+    overflow: hidden;  
 }
 
 .nav a:before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 100%;  /* Empieza debajo del texto */
-    height: 2px;  /* Altura de la línea */
+    bottom: 100%;  
+    height: 2px;  
     width: 100%;
-    background-color: #FFD700; /* Color amarillo */
-    transition: bottom 0.3s ease; /* Efecto de transición */
-    z-index: -1;  /* Colocarlo detrás del texto */
+    background-color: #FFD700; 
+    transition: bottom 0.3s ease; 
+    z-index: -1;  
 }
 
 .nav a:hover:before {
-    bottom: 0;  /* Mover hacia arriba al pasar el mouse */
+    bottom: 0;  
 }
 
 .nav a:hover {
-    color: #FFD700;  /* Cambiar el color del texto al pasar el mouse */
+    color: #FFD700;  
 }
 
-/* Estilo para el icono del carrito */
+
 .icono-carrito {
     position: absolute;
-    right: 20px;  /* Ajusta el espacio desde el borde derecho */
-    top: 40%;  /* Centra el icono verticalmente en el encabezado */
-    transform: translateY(-50%);  /* Ajuste fino para centrar exactamente */
-    z-index: 10;  /* Asegura que el carrito esté por encima de otros elementos */
+    right: 20px;  
+    top: 40%;  
+    transform: translateY(-50%); 
+    z-index: 10;  
 }
 
 .icono-carrito img {
-    height: 40px;  /* Tamaño del ícono del carrito */
-    cursor: pointer;  /* Cambiar el cursor al pasar sobre el carrito */
+    height: 40px;  
+    cursor: pointer; 
 }
 
 .icono-carrito:hover img {
-    opacity: 0.8;  /* Efecto visual al pasar el mouse */
+    opacity: 0.8; 
 }
 
 .icono-carrito {
@@ -80,10 +80,65 @@ body {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: red;  /* Fondo rojo para el contador */
+    background-color: red; 
     color: white;
     border-radius: 50%;
     padding: 5px;
     font-size: 14px;
     font-weight: bold;
+}
+.pie-pagina {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenedor-formulario {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.contenedor-formulario h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.formulario-noticias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario-noticias input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.formulario-noticias input[type="email"]:focus {
+    outline: none;
+    border-color: #FFD700;
+}
+
+.boton-enviar {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #000;
+    color: #FFD700;
 }
