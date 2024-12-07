@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipamiento - Flex & Fuel</title>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="Estilo.css">
     <style>
         body {
@@ -88,8 +89,42 @@
             flex-grow: 1;
             padding-left: 20px;
         }
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .content {
+        flex-grow: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+         h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+        h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+        .productos-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
     </style>
 </head>
+<div class="mensaje-carrito" id="mensaje-carrito">Producto añadido al carrito</div>
 <body>
     <header class="header">
         <a href="Pagina Principal.html">
@@ -120,30 +155,222 @@
         <main class="content">
             <h1>Equipamiento</h1>
             <p>Bienvenido a la sección de equipamiento. Selecciona una categoría de la izquierda para explorar los productos.</p>
-            <section id="straps">
-                <h2>Straps</h2>
-                <p>Descripción y productos relacionados con straps.</p>
-            </section>
-            <section id="muñequeras">
-                <h2>Muñequeras</h2>
-                <p>Descripción y productos relacionados con muñequeras.</p>
-            </section>
-            <section id="rodilleras">
-                <h2>Rodilleras</h2>
-                <p>Descripción y productos relacionados con rodilleras.</p>
-            </section>
-            <section id="cinturones">
-                <h2>Cinturones</h2>
-                <p>Descripción y productos relacionados con cinturones.</p>
-            </section>
-            <section id="coderas">
-                <h2>Coderas</h2>
-                <p>Descripción y productos relacionados con coderas.</p>
-            </section>
-            <section id="calzado">
-                <h2>Calzado</h2>
-                <p>Descripción y productos relacionados con calzado.</p>
-            </section>
+                <section id="straps" class="fade-in-scale">
+                    <h2>Straps</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="strap1.jpg" alt="Strap 1">
+                            <h3>Strap Premium</h3>
+                            <p>Mejor soporte y agarre en levantamientos pesados.</p>
+                            <p>$599.00</p>
+                            <button class="btn-carrito" data-nombre="Strap Premium" data-precio="599">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="strap2.jpg" alt="Strap 2">
+                            <h3>Strap Pro</h3>
+                            <p>Durabilidad y comodidad para entrenamientos intensos.</p>
+                            <p>$699.00</p>
+                            <button class="btn-carrito" data-nombre="Strap Pro" data-precio="699">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="strap3.jpg" alt="Strap 3">
+                            <h3>Strap Básico</h3>
+                            <p>Ligero y efectivo para iniciarte en el levantamiento.</p>
+                            <p>$399.00</p>
+                            <button class="btn-carrito" data-nombre="Strap Basico" data-precio="399">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="muñequeras" class="fade-in-scale">
+                    <h2>Muñequeras</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="muñequera1.jpg" alt="Muñequera 1">
+                            <h3>Muñequera Pro</h3>
+                            <p>Soporte firme para movimientos pesados.</p>
+                            <p>$499.00</p>
+                            <button class="btn-carrito" data-nombre="Muñequera Pro" data-precio="499">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="muñequera2.jpg" alt="Muñequera 2">
+                            <h3>Muñequera Premium</h3>
+                            <p>Estabilidad y confort en cada levantamiento.</p>
+                            <p>$599.00</p>
+                            <button class="btn-carrito" data-nombre="Muñequera Premium" data-precio="599">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="muñequera3.jpg" alt="Muñequera 3">
+                            <h3>Muñequera Básica</h3>
+                            <p>Perfecta para principiantes en el entrenamiento.</p>
+                            <p>$399.00</p>
+                            <button class="btn-carrito" data-nombre="Muñequera Básica" data-precio="399">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="rodilleras" class="fade-in-scale">
+                    <h2>Rodilleras</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="rodillera1.jpg" alt="Rodillera 1">
+                            <h3>Rodillera Pro</h3>
+                            <p>Máxima estabilidad para sentadillas profundas.</p>
+                            <p>$799.00</p>
+                            <button class="btn-carrito" data-nombre="Rodillera Pro" data-precio="799">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="rodillera2.jpg" alt="Rodillera 2">
+                            <h3>Rodillera Premium</h3>
+                            <p>Protección avanzada para entrenamientos intensos.</p>
+                            <p>$899.00</p>
+                            <button class="btn-carrito" data-nombre="Rodillera Premium" data-precio="899">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="rodillera3.jpg" alt="Rodillera 3">
+                            <h3>Rodillera Básica</h3>
+                            <p>Soporte ideal para ejercicios moderados.</p>
+                            <p>$599.00</p>
+                            <button class="btn-carrito" data-nombre="Rodillera Básica" data-precio="599">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>                
+                
+                <section id="cinturones" class="fade-in-scale">
+                    <h2>Cinturones</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="cinturon1.jpg" alt="Cinturón 1">
+                            <h3>Cinturón Elite</h3>
+                            <p>Soporte lumbar para levantamientos avanzados.</p>
+                            <p>$999.00</p>
+                            <button class="btn-carrito" data-nombre="Cinturón Elite" data-precio="999">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="cinturon2.jpg" alt="Cinturón 2">
+                            <h3>Cinturón Pro</h3>
+                            <p>Comodidad y estabilidad para cargas moderadas.</p>
+                            <p>$799.00</p>
+                            <button class="btn-carrito" data-nombre="Cinturón Pro" data-precio="799">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="cinturon3.jpg" alt="Cinturón 3">
+                            <h3>Cinturón Básico</h3>
+                            <p>Ideal para principiantes en powerlifting.</p>
+                            <p>$499.00</p>
+                            <button class="btn-carrito" data-nombre="Cinturón Básico" data-precio="499">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="coderas" class="fade-in-scale">
+                    <h2>Coderas</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="codera1.jpg" alt="Codera 1">
+                            <h3>Codera Pro</h3>
+                            <p>Soporte superior para ejercicios de empuje.</p>
+                            <p>$499.00</p>
+                            <button class="btn-carrito" data-nombre="Codera Pro" data-precio="499">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="codera2.jpg" alt="Codera 2">
+                            <h3>Codera Premium</h3>
+                            <p>Comodidad y protección en entrenamientos intensos.</p>
+                            <p>$599.00</p>
+                            <button class="btn-carrito" data-nombre="Codera Premium" data-precio="599">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="codera3.jpg" alt="Codera 3">
+                            <h3>Codera Básica</h3>
+                            <p>Ligera y efectiva para principiantes.</p>
+                            <p>$399.00</p>
+                            <button class="btn-carrito" data-nombre="Codera Básica" data-precio="399">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="calzado" class="fade-in-scale">
+                    <h2>Calzado</h2>
+                    <div class="productos-container">
+                        <div class="producto">
+                            <img src="zapato1.jpg" alt="Calzado 1">
+                            <h3>Zapatos de Levantamiento</h3>
+                            <p>Estabilidad máxima para sentadillas profundas.</p>
+                            <p>$1,999.00</p>
+                            <button class="btn-carrito" data-nombre="Zapatos de Levantamiento" data-precio="1999">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="zapato2.jpg" alt="Calzado 2">
+                            <h3>Tenis de Entrenamiento</h3>
+                            <p>Versátiles y cómodos para entrenamiento funcional.</p>
+                            <p>$1,499.00</p>
+                            <button class="btn-carrito" data-nombre="Tenis de Entrenamiento" data-precio="1499">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                        <div class="producto">
+                            <img src="zapato3.jpg" alt="Calzado 3">
+                            <h3>Zapatos Minimalistas</h3>
+                            <p>Ligereza y conexión al suelo para levantamientos precisos.</p>
+                            <p>$1,299.00</p>
+                            <button class="btn-carrito" data-nombre="Zapatos Minimalistas" data-precio="1299">Añadir al carrito</button>
+                            <button class="btn-favoritos">
+                                <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
         </main>
     </div>
 </body>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="Estilo.css">
+    <script src="main.js"></script>
 
     <title>Accesorios - Flex & Fuel</title>
     <style>
@@ -45,6 +46,39 @@
             flex-grow: 1;
             padding-left: 20px;
         }
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .content {
+        flex-grow: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+         h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+        h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+        .productos-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
     </style>
 </head>
 <body>
@@ -60,52 +94,121 @@
             <a href="Registro.html">Regístrate</a>
         </nav>
         <a href="Carrito.html" class="icono-carrito">
-            <img src="carrito-icono.png" alt="Carrito" /> <!-- Asegúrate de tener esta imagen -->
+            <img src="carrito-icono.png" alt="Carrito" />
         </a>
     </header>
+    <div class="mensaje-carrito" id="mensaje-carrito">Producto añadido al carrito</div>
     <div class="container">
         <aside class="sidebar">
             <h2>Categorías</h2>
             <a href="#sbd">SBD</a>
-            <a href="#rogue">Rogue Fitness</a>
-            <a href="#gorilla">Gorilla Wear</a>
-            <a href="#elite">Elite Fitness</a>
-            <a href="#powerlifting">Powerlifting</a>
-            <div class="divider"></div>  <!-- Divider line -->
+            <a href="#mochilas">Mochilas</a>
+            <a href="#shakers">Shakers</a>
+            <div class="divider"></div>
         </aside>
         <main class="content">
             <h1>Accesorios</h1>
             <p>Bienvenido a la sección de accesorios. Selecciona una categoría de la izquierda para explorar los productos.</p>
-            <section id="sbd">
+
+            <section id="sbd" class="fade-in-scale">
                 <h2>SBD</h2>
-                <p>Descripción y productos relacionados con SBD.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="sbd1.jpg" alt="SBD 1">
+                        <h3>SBD Premium</h3>
+                        <p>Muñequeras profesionales para levantamiento.</p>
+                        <p>$899.00</p>
+                        <button class="btn-carrito" data-nombre="SBD Premium" data-precio="899">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="sbd2.jpg" alt="SBD 2">
+                        <h3>SBD Pro</h3>
+                        <p>Muñequeras resistentes para entrenamientos intensos.</p>
+                        <p>$799.00</p>
+                        <button class="btn-carrito" data-nombre="SBD Pro" data-precio="799">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="sbd3.jpg" alt="SBD 3">
+                        <h3>SBD Básico</h3>
+                        <p>Perfecto para principiantes en el powerlifting.</p>
+                        <p>$599.00</p>
+                        <button class="btn-carrito" data-nombre="SBD Básico" data-precio="599">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="rogue">
-                <h2>Rogue Fitness</h2>
-                <p>Descripción y productos relacionados con Rogue Fitness.</p>
+
+            <section id="mochilas" class="fade-in-scale">
+                <h2>Mochilas</h2>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="mochila1.jpg" alt="Mochila 1">
+                        <h3>Mochila Premium</h3>
+                        <p>Gran capacidad para llevar todo tu equipo.</p>
+                        <p>$699.00</p>
+                        <button class="btn-carrito" data-nombre="Mochila Premium" data-precio="699">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="mochila2.jpg" alt="Mochila 2">
+                        <h3>Mochila Pro</h3>
+                        <p>Resistente y con diseño ergonómico.</p>
+                        <p>$599.00</p>
+                        <button class="btn-carrito" data-nombre="Mochila Pro" data-precio="599">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="mochila3.jpg" alt="Mochila 3">
+                        <h3>Mochila Compacta</h3>
+                        <p>Ligera y fácil de transportar.</p>
+                        <p>$499.00</p>
+                        <button class="btn-carrito" data-nombre="Mochila Compacta" data-precio="499">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="gorilla">
-                <h2>Gorilla Wear</h2>
-                <p>Descripción y productos relacionados con Gorilla Wear.</p>
-            </section>
-            <section id="elite">
-                <h2>Elite Fitness</h2>
-                <p>Descripción y productos relacionados con Elite Fitness.</p>
-            </section>
-            <section id="powerlifting">
-                <h2>Powerlifting</h2>
-                <p>Descripción y productos relacionados con Powerlifting.</p>
-            </section>
-        </main>
-    </div>
-    <footer class="pie-pagina">
-        <div class="contenedor-formulario">
-            <h3>¡Suscríbete para recibir noticias!</h3>
-            <form action="Pagina Principal.html" method="POST" class="formulario-noticias">
-                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
-                <button type="submit" class="boton-enviar">Enviar</button>
-            </form>
-        </div>
-    </footer> 
-</body>
-</html>
+
+            <section id="shakers" class="fade-in-scale">
+                <h2>Shakers</h2>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="shaker1.jpg" alt="Shaker 1">
+                        <h3>Shaker Premium</h3>
+                        <p>Con compartimento para suplementos.</p>
+                        <p>$299.00</p>
+                        <button class="btn-carrito" data-nombre="Shaker Premium" data-precio="299">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="shaker2.jpg" alt="Shaker 2">
+                        <h3>Shaker Pro</h3>
+                        <p>Material resistente y libre de BPA.</p>
+                        <p>$249.00</p>
+                        <button class="btn-carrito" data-nombre="Shaker Pro" data-precio="249">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
+                </section>
+            </main>
+            </div>
+        </body>
+        </html>
+                        

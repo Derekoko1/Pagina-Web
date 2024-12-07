@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="Estilo.css">
+    <script src="main.js"></script>
 
     <title>Hombres - Flex & Fuel</title>
     <style>
@@ -37,8 +38,39 @@
             flex-grow: 1;
             padding-left: 20px;
         }
+        .content {
+        flex-grow: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+         h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+        h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+        .productos-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
     </style>
 </head>
+<div class="mensaje-carrito" id="mensaje-carrito">Producto añadido al carrito</div>
 <body>
     <header class="header">
         <a href="Pagina Principal.html">
@@ -61,26 +93,114 @@
             <a href="#gymshark">Gymshark</a>
             <a href="#youngla">Young LA</a>
             <a href="#alphalete">Alphalete</a>
-            <a href="#bornprimitive">Born Primitive</a>
         </aside>
         <main class="content">
             <h1>Hombres</h1>
             <p>Bienvenido a la sección de ropa para hombres. Selecciona una marca de la izquierda para explorar los productos.</p>
-            <section id="gymshark">
+            <section id="gymshark" class="fade-in-scale">
                 <h2>Gymshark</h2>
-                <p>Descripción y productos relacionados con Gymshark.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="gymshark1.jpg" alt="Gymshark 1">
+                        <h3>Camisa Training</h3>
+                        <p>Cómoda y transpirable para tus entrenamientos.</p>
+                        <p>$899.00</p>
+                        <button class="btn-carrito" data-nombre="Camisa Training" data-precio="899">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="gymshark2.jpg" alt="Gymshark 2">
+                        <h3>Shorts Flex</h3>
+                        <p>Diseño ligero para movilidad total.</p>
+                        <p>$799.00</p>
+                        <button class="btn-carrito" data-nombre="Shorts Flex" data-precio="799">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="gymshark3.jpg" alt="Gymshark 3">
+                        <h3>Hoodie Classic</h3>
+                        <p>Calidez y estilo en un diseño clásico.</p>
+                        <p>$1,199.00</p>
+                        <button class="btn-carrito" data-nombre="Hoodie Classic" data-precio="1199">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="youngla">
+            <section id="youngla"class="fade-in-scale">
                 <h2>Young LA</h2>
-                <p>Descripción y productos relacionados con Young LA.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="youngla1.jpg" alt="Young LA 1">
+                        <h3>Joggers Confort</h3>
+                        <p>Perfectos para el gimnasio y el día a día.</p>
+                        <p>$1,099.00</p>
+                        <button class="btn-carrito" data-nombre="Joggers Confort" data-precio="1099">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="youngla2.jpg" alt="Young LA 2">
+                        <h3>Camiseta Oversized</h3>
+                        <p>Estilo urbano y moderno para cualquier ocasión.</p>
+                        <p>$799.00</p>
+                        <button class="btn-carrito" data-nombre="Camiseta Oversized" data-precio="799">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="youngla3.jpg" alt="Young LA 3">
+                        <h3>Sudadera Premium</h3>
+                        <p>Comodidad absoluta en cualquier clima.</p>
+                        <p>$1,299.00</p>
+                        <button class="btn-carrito" data-nombre="Sudadera Premium" data-precio="1299">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="alphalete">
+            <section id="alphalete"class="fade-in-scale">
                 <h2>Alphalete</h2>
-                <p>Descripción y productos relacionados con Alphalete.</p>
-            </section>
-            <section id="bornprimitive">
-                <h2>Born Primitive</h2>
-                <p>Descripción y productos relacionados con Born Primitive.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="alphalete1.jpg" alt="Alphalete 1">
+                        <h3>Leggings Infinity</h3>
+                        <p>Compresión y flexibilidad para tu entrenamiento.</p>
+                        <p>$1,399.00</p>
+                        <button class="btn-carrito" data-nombre="Leggings Infinity" data-precio="1399">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="alphalete2.jpg" alt="Alphalete 2">
+                        <h3>Camiseta Luxe</h3>
+                        <p>Diseño premium con tecnología de enfriamiento.</p>
+                        <p>$999.00</p>
+                        <button class="btn-carrito" data-nombre="Camiseta Luxe" data-precio="999">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="alphalete3.jpg" alt="Alphalete 3">
+                        <h3>Hoodie Performance</h3>
+                        <p>Ligero y cálido, ideal para entrenar al aire libre.</p>
+                        <p>$1,599.00</p>
+                        <button class="btn-carrito" data-nombre="Hoodie Performance" data-precio="1599">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
         </main>
     </div>

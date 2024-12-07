@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="Estilo.css">
+    <script src="main.js" defer></script>
 
     <title>Suplementación - Flex & Fuel</title>
     <style>
@@ -45,8 +46,43 @@
             flex-grow: 1;
             padding-left: 20px;
         }
+        .content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .content {
+        flex-grow: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+         h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+        h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+        .productos-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
     </style>
 </head>
+<div class="mensaje-carrito" id="mensaje-carrito">Producto añadido al carrito</div>
+
 <body>
     <header class="header">
         <a href="Pagina Principal.html">
@@ -69,32 +105,118 @@
             <a href="#pre-workouts">Pre-workouts</a>
             <a href="#proteinas">Proteínas</a>
             <a href="#creatinas">Creatinas</a>
-            <a href="#vitaminas">Vitaminas</a>
-            <a href="#aminoacidos">Aminoácidos</a>
             <div class="divider"></div> 
         </aside>
         <main class="content">
             <h1>Suplementación</h1>
             <p>Bienvenido a la sección de suplementación. Selecciona una categoría de la izquierda para explorar los productos.</p>
-            <section id="pre-workouts">
+
+            <section id="pre-workouts" class="fade-in-scale">
                 <h2>Pre-workouts</h2>
-                <p>Descripción y productos relacionados con pre-workouts.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="preworkout1.jpg" alt="Pre-workout 1">
+                        <h3>Pre-workout Energy</h3>
+                        <p>Energía explosiva para tus entrenamientos.</p>
+                        <p>$899.00</p>
+                        <button class="btn-carrito" data-nombre="Pre-workout Energy" data-precio="899">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="preworkout2.jpg" alt="Pre-workout 2">
+                        <h3>Pre-workout Focus</h3>
+                        <p>Mejora la concentración y el rendimiento.</p>
+                        <p>$999.00</p>
+                        <button class="btn-carrito" data-nombre="Pre-workout Focus" data-precio="999">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="preworkout3.jpg" alt="Pre-workout 3">
+                        <h3>Pre-workout Max</h3>
+                        <p>Rendimiento máximo en cada sesión.</p>
+                        <p>$1,199.00</p>
+                        <button class="btn-carrito" data-nombre="Pre-workout Max" data-precio="1199">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="proteinas">
+
+            <section id="proteinas" class="fade-in-scale">
                 <h2>Proteínas</h2>
-                <p>Descripción y productos relacionados con proteínas.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="proteina1.jpg" alt="Proteína 1">
+                        <h3>Proteína Whey</h3>
+                        <p>Construye músculo de forma eficiente.</p>
+                        <p>$799.00</p>
+                        <button class="btn-carrito" data-nombre="Proteína Whey" data-precio="799">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="proteina2.jpg" alt="Proteína 2">
+                        <h3>Proteína Vegana</h3>
+                        <p>Nutrición basada en plantas.</p>
+                        <p>$899.00</p>
+                        <button class="btn-carrito" data-nombre="Proteína Vegana" data-precio="899">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="proteina3.jpg" alt="Proteína 3">
+                        <h3>Proteína Isolate</h3>
+                        <p>Absorción rápida para recuperación.</p>
+                        <p>$999.00</p>
+                        <button class="btn-carrito" data-nombre="Proteína Isolate" data-precio="999">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="creatinas">
+
+            <section id="creatinas" class="fade-in-scale">
                 <h2>Creatinas</h2>
-                <p>Descripción y productos relacionados con creatinas.</p>
-            </section>
-            <section id="vitaminas">
-                <h2>Vitaminas</h2>
-                <p>Descripción y productos relacionados con vitaminas.</p>
-            </section>
-            <section id="aminoacidos">
-                <h2>Aminoácidos</h2>
-                <p>Descripción y productos relacionados con aminoácidos.</p>
+                <div class="productos-container">
+                    <div class="producto">
+                        <img src="creatina1.jpg" alt="Creatina 1">
+                        <h3>Creatina Monohidrato</h3>
+                        <p>Incrementa fuerza y resistencia.</p>
+                        <p>$599.00</p>
+                        <button class="btn-carrito" data-nombre="Creatina Monohidrato" data-precio="599">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="creatina2.jpg" alt="Creatina 2">
+                        <h3>Creatina Micronizada</h3>
+                        <p>Fácil absorción para mejores resultados.</p>
+                        <p>$699.00</p>
+                        <button class="btn-carrito" data-nombre="Creatina Micronizada" data-precio="699">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                    <div class="producto">
+                        <img src="creatina3.jpg" alt="Creatina 3">
+                        <h3>Creatina Blend</h3>
+                        <p>Combinación óptima para rendimiento.</p>
+                        <p>$799.00</p>
+                        <button class="btn-carrito" data-nombre="Creatina Blend" data-precio="799">Añadir al carrito</button>
+                        <button class="btn-favoritos">
+                            <img src="favoritos-icono.png" alt="Añadir a favoritos">
+                        </button>
+                    </div>
+                </div>
             </section>
         </main>
     </div>

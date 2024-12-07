@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Estilo.css">
+    <script src="main.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Carrito - Flex & Fuel</title>
     <style>
@@ -35,41 +36,6 @@
         .icono-carrito img {
             width: 30px;
             height: 30px;
-        }
-        .promocion {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-            color: #ffffff;
-        }
-        .promocion-txt {
-            max-width: 50%;
-        }
-        .promocion-txt h2 {
-            font-size: 28px;
-            margin: 0;
-            font-family: 'Pacifico', cursive;
-        }
-        .promocion-txt p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .comprar-btn {
-            background-color: #000000;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            text-decoration: none;
-        }
-        .comprar-btn:hover {
-            background-color: #FFD700;
-            color: #000;
         }
         .contenedor-carrito {
             display: flex;
@@ -158,25 +124,15 @@
                         <th>Cantidad</th>
                         <th>Precio</th>
                         <th>Subtotal</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Producto 1</td>
-                        <td>1</td>
-                        <td>$100.00</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Producto 2</td>
-                        <td>2</td>
-                        <td>$50.00</td>
-                        <td>$100.00</td>
-                    </tr>
+                <tbody id="carrito-items">
+                  
                 </tbody>
             </table>
-            <div class="total-carrito">
-                <p>Total: $200.00</p>
+            <div class="total-carrito" id="total-carrito">
+                Total: $0.00
             </div>
             <button class="boton-finalizar">Finalizar Compra</button>
         </div>
